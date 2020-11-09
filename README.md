@@ -15,3 +15,43 @@ A webscraper/processor for finding the most common job skills from Seek job ads
 - Develop a good default keyword list
 - Make tests for keyword detection sensitivity (especially for one-letter keywords e.g. R and C)
 - Do sentiment analysis for things other than keywords (e.g. common soft skills)
+
+## Sample output
+472: SQL  
+436: Python  
+248: AWS  
+215: Java  
+178: Scala  
+175: Azure  
+174: R  
+132: Spark  
+119: Tableau  
+105: Power BI  
+104: SAS  
+80: Hadoop  
+63: C#  
+59: Oracle  
+56: Hive  
+56: C++  
+56: C  
+55: S3  
+49: Redshift  
+34: Lambda  
+28: EMR  
+27: EC2  
+25: Athena  
+20: Teradata  
+19: MongoDB  
+18: Alteryx  
+16: MATLAB  
+15: TensorFlow  
+15: Cassandra  
+14: Jupyter  
+14: DynamoDB  
+13: Kinesis  
+11: PyTorch  
+10: Pig  
+10: Impala  
+8: Cloudformation  
+6: SageMaker  
+1: Clickhouse  

@@ -12,13 +12,12 @@ def main():
                 'Pig', 'Hive', 'Impala', 'Teradata', 'Oracle', 'SAS', 'MongoDB', 
                 'Redshift', 'S3', 'EC2', 'Lambda', 'EMR', 'SageMaker', 'DynamoDB', 
                 'Cloudformation', 'Athena', 'Kinesis', 'Cassandra', 'Alteryx', 
-                'Jupyter', 'Clickhouse','PyTorch', 'Pytorch', 'TensorFlow', 
-                'Tensorflow']
+                'Jupyter', 'Clickhouse','PyTorch', 'TensorFlow']
     
     total_kw = dict.fromkeys(keywords, 0)
     
     #Perform search
-    urls = get_job_urls(search_url)
+    urls = get_job_urls(search_url, limit = 100)
     print("Scraping job info:")
     for url in tqdm(urls):
         try:
@@ -30,7 +29,13 @@ def main():
         for key in keywords:
             if kw_presence[key]:
                 total_kw[key] += 1
-    print(total_kw)
+    
+    #Print the list of keywords, sorted by frequency
+    kw_freq = [(v,k) for k,v in total_kw.items()]
+    kw_freq.sort(reverse=True)
+    for k,v in kw_freq:
+        print(f"{k}: {v}")
+    return total_kw
     
 if __name__ == "__main__":
     main()

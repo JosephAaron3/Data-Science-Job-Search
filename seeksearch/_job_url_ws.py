@@ -16,7 +16,7 @@ class SearchLinkParser(HTMLParser):
     def get_urls(self):
         return self._urls
 
-def get_job_urls(url, limit = None):
+def get_urls(url, limit = None):
     urls_all = []
     page_num = 1
     
@@ -37,13 +37,9 @@ def get_job_urls(url, limit = None):
         f.close()
         parser = SearchLinkParser()
         parser.feed(str(text))
-    
     return urls_all[:limit]
 
-def main():
-    search_url = "https://seek.com.au/data-science-jobs"
-    urls = get_job_urls(search_url)
-    print(urls)
-
 if __name__ == "__main__":
-    main()
+    urls = get_urls("https://seek.com.au/data-science-jobs", limit = 100)
+    print(urls)
+    

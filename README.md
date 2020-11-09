@@ -1,5 +1,6 @@
-# Data science job search
-A webscraper/processor for finding the most common job skills from Seek job ads
+# Seek search
+A webscraper/processor for finding the most common tools/skills from Seek job ads.  
+Made for searching data science jobs.
 
 ## Files
 *job_url_ws.py* - Webscraper for getting urls from a base search (e.g. all urls from all pages of the search "Data scientist" on Seek).
@@ -54,4 +55,4 @@ A webscraper/processor for finding the most common job skills from Seek job ads
 10: Impala  
 8: Cloudformation  
 6: SageMaker  
-1: Clickhouse  
+1: Clickhouse

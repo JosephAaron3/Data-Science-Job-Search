@@ -7,7 +7,13 @@ def main():
     #User-defined values
     base_url = "https://www.seek.com.au"
     search_url = "https://seek.com.au/data-science-jobs"
-    keywords = ['R', 'Python', 'SQL', 'C', 'Java', 'C++']
+    keywords = ['R', 'Python', 'SQL', 'C', 'Java', 'C++', 'Spark', 'Hadoop',
+                'C#', 'Tableau', 'Power BI', 'AWS', 'Azure', 'Scala', 'MATLAB',
+                'Pig', 'Hive', 'Impala', 'Teradata', 'Oracle', 'SAS', 'MongoDB', 
+                'Redshift', 'S3', 'EC2', 'Lambda', 'EMR', 'SageMaker', 'DynamoDB', 
+                'Cloudformation', 'Athena', 'Kinesis', 'Cassandra', 'Alteryx', 
+                'Jupyter', 'Clickhouse','PyTorch', 'Pytorch', 'TensorFlow', 
+                'Tensorflow']
     
     total_kw = dict.fromkeys(keywords, 0)
     

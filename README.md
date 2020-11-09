@@ -14,3 +14,4 @@ A webscraper/processor for finding the most common job skills from Seek job ads
 - Display/filter job names to ensure the right ads are being scraped
 - Develop a good default keyword list
 - Make tests for keyword detection sensitivity (especially for one-letter keywords e.g. R and C)
+- Do sentiment analysis for things other than keywords (e.g. common soft skills)

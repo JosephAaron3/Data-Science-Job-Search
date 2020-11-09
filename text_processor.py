@@ -23,7 +23,7 @@ def text_search(text, keywords):
             forms = [' '+base+' ', ' '+base+',', ','+base+',', 
                      '/'+base+'/', '/'+base+' ', ' '+base+'/']
         else:
-            forms = [base, base.lower()]
+            forms = [base, base.lower(), base.upper()]
         if any(word in text for word in forms):
             kw_check[base] = True
     return kw_check

@@ -1,5 +1,5 @@
 # Data science job search
-A webscraper/processor for finding the most common required job skills
+A webscraper/processor for finding the most common required job skills from Seek jobs
 
 ## Files
 *job_url_ws.py* - Webscraper for getting urls from a base search (e.g. all urls from all pages of the search "Data scientist" on Seek).

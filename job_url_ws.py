@@ -36,7 +36,9 @@ def get_job_urls(url, limit = math.inf):
         parser = SearchLinkParser()
         parser.feed(str(text))
         print("URLs gathered: ", len(urls_all), "of", limit)
-
+    
+    if limit == math.inf:
+        return urls_all
     return urls_all[:limit]
 
 def main():

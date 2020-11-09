@@ -5,12 +5,12 @@ from text_processor import *
 def main():
     #User-defined values
     search_url = "https://seek.com.au/data-science-jobs"
-    keywords = ['R', 'Python', 'SQL', 'C']
+    keywords = ['R', 'Python', 'SQL', 'C', 'Java', 'C++']
     
     total_kw = dict.fromkeys(keywords, 0)
     
     #Perform search
-    urls = get_job_urls(search_url)
+    urls = get_job_urls(search_url, limit = 100)
     for url in urls:
         text = get_text(url)
         text = clean_text(text)

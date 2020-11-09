@@ -1,7 +1,6 @@
 import urllib
 import urllib.request
 from html.parser import HTMLParser
-import math
 
 class SearchLinkParser(HTMLParser):
     def __init__(self):
@@ -17,7 +16,7 @@ class SearchLinkParser(HTMLParser):
     def get_urls(self):
         return self._urls
 
-def get_job_urls(url, limit = math.inf):
+def get_job_urls(url, limit = None):
     urls_all = []
     page_num = 1
     
@@ -26,8 +25,11 @@ def get_job_urls(url, limit = math.inf):
     f.close()
     parser = SearchLinkParser()
     parser.feed(str(text))
-    while((page_urls := parser.get_urls()) != [] and len(urls_all) < limit):
+    while((page_urls := parser.get_urls()) != []):
         urls_all.extend(page_urls)
+        print("URLs gathered: ", len(urls_all))
+        if limit != None and len(urls_all) >= limit:
+            break
         page_num += 1
         url_next = ''.join([url, f'?page={page_num}'])
         f = urllib.request.urlopen(url_next)
@@ -35,10 +37,7 @@ def get_job_urls(url, limit = math.inf):
         f.close()
         parser = SearchLinkParser()
         parser.feed(str(text))
-        print("URLs gathered: ", len(urls_all), "of", limit)
     
-    if limit == math.inf:
-        return urls_all
     return urls_all[:limit]
 
 def main():

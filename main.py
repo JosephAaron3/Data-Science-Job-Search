@@ -17,7 +17,7 @@ def main():
     total_kw = dict.fromkeys(keywords, 0)
     
     #Perform search
-    urls = get_job_urls(search_url, limit = 100)
+    urls = get_job_urls(search_url, limit = None)
     print("Scraping job info:")
     for url in tqdm(urls):
         try:

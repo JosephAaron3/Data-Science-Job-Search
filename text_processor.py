@@ -1,4 +1,4 @@
-
+import re
 
 def clean_text(text_list):
     #Remove text from bottom tab
@@ -23,9 +23,13 @@ def text_search(text, keywords):
             forms = [' '+base+' ', ' '+base+',', ','+base+',', 
                      '/'+base+'/', '/'+base+' ', ' '+base+'/']
         else:
-            forms = [base, base.lower(), base.upper()]
-        if any(word in text for word in forms):
-            kw_check[base] = True
+            forms = [base]
+        try: #Handle errors from things like C++ in re
+            if any(re.search(word, text, re.IGNORECASE) for word in forms):
+                kw_check[base] = True
+        except:
+            if any(word in text for word in forms):
+                kw_check[base] = True
     return kw_check
             
 

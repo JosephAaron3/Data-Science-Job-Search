@@ -3,6 +3,7 @@ current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentfra
 parent_dir = os.path.dirname(current_dir)
 sys.path.insert(0, parent_dir) 
 import seeksearch as ss
+from tqdm import tqdm
 
 search_url = "https://seek.com.au/data-science-jobs"
 kw = ['R', 'Python', 'SQL', 'C', 'Java', 'C++', 'Spark', 'Hadoop',

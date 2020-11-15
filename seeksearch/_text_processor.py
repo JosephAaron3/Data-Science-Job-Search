@@ -1,12 +1,6 @@
 import re
 
 def clean_text(text_list):
-    #Remove text from bottom tab
-    tab_start = text_list.index('Job search')
-    if len(text_list)-tab_start != 60:
-        print("Warning - Possibly removing info")
-    text_list = text_list[:tab_start]
-    
     #Remove unformated symbols
     bad_format = [('\\xe2\\x80\\x99',"'"),('\\xe2\\x80\\x9c', '"'), ('\\xe2\\x80\\x9d', '"'), 
                   ('\\xc2\\xa0', ' '), ('\\xc2\\xa0', ' ')]

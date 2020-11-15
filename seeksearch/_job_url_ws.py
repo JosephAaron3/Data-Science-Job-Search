@@ -11,6 +11,7 @@ def SearchLinkParser(url):
 def get_urls(url, limit = None):
     urls_all = []
     page_num = 1
+    url_next = url
 
     while((page_urls := SearchLinkParser(url)) != []):
         urls_all.extend(page_urls)
@@ -18,7 +19,7 @@ def get_urls(url, limit = None):
         if limit != None and len(urls_all) >= limit:
             break
         page_num += 1
-        url = ''.join([url, f'?page={page_num}'])
+        url_next = ''.join([url, f'?page={page_num}'])
     return urls_all[:limit]
 
 

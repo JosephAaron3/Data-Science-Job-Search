@@ -13,7 +13,7 @@ def get_urls(url, limit = None):
     page_num = 1
     url_next = url
 
-    while((page_urls := SearchLinkParser(url)) != []):
+    while((page_urls := SearchLinkParser(url_next)) != []):
         urls_all.extend(page_urls)
         print("URLs gathered: ", len(urls_all))
         if limit != None and len(urls_all) >= limit:

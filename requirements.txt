@@ -1,4 +1,4 @@
 urllib
-html
+bs4
 re
 tqdm

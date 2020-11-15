@@ -1,7 +1,7 @@
 from html.parser import HTMLParser
 import urllib
 import urllib.request
-from ._text_processor import clean_text
+from _text_processor import clean_text
 
 class JobLinkParser(HTMLParser):
     def __init__(self):
@@ -45,5 +45,5 @@ def get_text(url, clean = False):
     return text
 
 if __name__ == "__main__":
-    text = get_text('https://www.seek.com.au/job/50732163?type=promoted#searchRequestToken=caac9ad3-e493-49bd-bf71-94137f7948be')
+    text = get_text('https://www.seek.com.au/job/50907358?type=standard#searchRequestToken=88e63196-4468-46f6-b91c-bd0e450a4d6a')
     print(text)

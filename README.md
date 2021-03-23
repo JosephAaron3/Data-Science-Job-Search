@@ -12,11 +12,11 @@ Made for searching data science jobs.
 *search.py* - Using the above modules, find the highest frequency words (from a user-defined list) from a base search
 
 ## To do
-- Display/filter job names to ensure the right ads are being scraped
-- Develop a good default keyword list
+- ~~Display/filter job names to ensure the right ads are being scraped~~
+- ~~Develop a good default keyword list~~
 - Make tests for keyword detection sensitivity (especially for one-letter keywords e.g. R and C)
-- Do sentiment analysis for things other than keywords (e.g. common soft skills)
-- ~~Change scraper backend to beautiful soup~~
+- Search for things other than keywords (e.g. common soft skills)
+- ~~Change scraper package to beautiful soup~~
 
 ## Sample output
 472: SQL  

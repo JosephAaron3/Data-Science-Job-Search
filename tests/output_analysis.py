@@ -1,5 +1,8 @@
 import matplotlib.pyplot as plt
 import scipy.stats as sps
+import seaborn as sns
+import matplotlib as mpl
+mpl.rcParams['figure.dpi']= 500
 
 top_100 = {'R': 37,
  'Python': 71,
@@ -84,7 +87,11 @@ kw_freq.sort(reverse=True)
 for k,v in kw_freq:
     print(f"{k}: {v}")
 
-plt.plot(sorted(top_100.values(), reverse=True))
+sns.set_theme()
+sns.relplot(y = sorted(top_all.values(), reverse=True), x = range(1,len(top_all)+1), kind = "line")
+plt.xlabel("nth most common keyword")
+plt.ylabel("Count")
+plt.title("Data science language/platform keyword frequency")
 plt.show()
 
 kw_freq100 = [v for k,v in top_100.items() if v >= 5]

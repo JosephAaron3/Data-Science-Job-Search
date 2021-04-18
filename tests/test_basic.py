@@ -12,6 +12,7 @@ kw = ['R', 'Python', 'SQL', 'C', 'Java', 'C++', 'Spark', 'Hadoop',
             'Redshift', 'S3', 'EC2', 'Lambda', 'EMR', 'SageMaker', 'DynamoDB', 
             'Cloudformation', 'Athena', 'Kinesis', 'Cassandra', 'Alteryx', 
             'Jupyter', 'Clickhouse','PyTorch', 'TensorFlow', 'PowerBI']
-lim = int(22*4.5)
+lim = int(22*10)
 
 results = ss.search(search_url, kw, lim)
+

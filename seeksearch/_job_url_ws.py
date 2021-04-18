@@ -8,6 +8,7 @@ def SearchLinkParser(url):
     page = urllib.request.urlopen(url)
     content = soup(page, 'html.parser')
     links = content.find_all(name = 'a', attrs = {'class': '_2S5REPk'})
+    print([link.text for link in links if any(keywords in link.text for keywords in keywords_list)])
     return [link.get('href') for link in links if any(keywords in link.text for keywords in keywords_list)]
 
 def get_urls(url, limit = None):

@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import scipy.stats as sps
 import seaborn as sns
 import matplotlib as mpl
-mpl.rcParams['figure.dpi']= 500
+mpl.rcParams['figure.dpi']= 100
 
 top_100 = {'R': 37,
  'Python': 71,

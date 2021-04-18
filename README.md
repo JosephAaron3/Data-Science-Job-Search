@@ -20,6 +20,7 @@ Made for searching data science jobs.
 
 ## Sample output
 ![Keyword frequency graph](/Frequency_plot2.png)
+
 As expected, this seems to follow a Pareto distribution
 
 472: SQL  

@@ -6,7 +6,7 @@ from ._text_processor import clean_text
 def JobLinkParser(url):
     page = urllib.request.urlopen(url)
     content = soup(page, 'html.parser')
-    text_full = content.find_all(name = 'div', attrs = {'class': ['templatetext','FYwKg WaMPc_4']})
+    text_full = content.find_all(name = 'div', attrs = {'data-automation': ['templatetext','jobAdDetails']})
     text_full = text_full[0].find_all(['p','li'])
     return [text_full[j].text for j in range(len(text_full))]
 

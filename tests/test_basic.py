@@ -1,4 +1,4 @@
-import os,sys,inspect
+import os, sys, inspect
 current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 parent_dir = os.path.dirname(current_dir)
 sys.path.insert(0, parent_dir) 
@@ -12,7 +12,7 @@ kw = ['R', 'Python', 'SQL', 'C', 'Java', 'C++', 'Spark', 'Hadoop',
             'Redshift', 'S3', 'EC2', 'Lambda', 'EMR', 'SageMaker', 'DynamoDB', 
             'Cloudformation', 'Athena', 'Kinesis', 'Cassandra', 'Alteryx', 
             'Jupyter', 'Clickhouse','PyTorch', 'TensorFlow', 'PowerBI']
-lim = int(22*10)
+lim = int(20)
 
 results = ss.search(search_url, kw, lim)
 

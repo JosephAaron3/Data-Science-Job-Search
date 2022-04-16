@@ -7,7 +7,7 @@ keywords_list = ["Data Science", "Scientist", "Analyst"]
 def SearchLinkParser(url):
     page = urllib.request.urlopen(url)
     content = soup(page, 'html.parser')
-    links = content.find_all(name = 'a', attrs = {'class': '_2S5REPk'})
+    links = content.find_all(name = 'a', attrs = {'data-automation': 'jobTitle'})
     print([link.text for link in links if any(keywords in link.text for keywords in keywords_list)])
     return [link.get('href') for link in links if any(keywords in link.text for keywords in keywords_list)]
 

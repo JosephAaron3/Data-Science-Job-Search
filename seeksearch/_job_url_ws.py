@@ -2,7 +2,7 @@ import urllib
 import urllib.request
 from bs4 import BeautifulSoup as soup
 
-keywords_list = ["Data Science", "Scientist", "Analyst"]
+keywords_list = ["Data Science", "Scientist"]
 
 def SearchLinkParser(url):
     page = urllib.request.urlopen(url)
